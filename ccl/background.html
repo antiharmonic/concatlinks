@@ -1,0 +1,27 @@
+<html>
+<head>
+  <script>
+    // set up the context menu
+    chrome.contextMenus.create({
+      "title": "Concatenate Link Address",
+      "contexts": ["link"].
+      "onClick": function(e) {
+        // here is where the brains of the extension seem to need to go
+        // we need to get the current link address and then add it to whatever is in the clipboard
+        // (possibly ensure that the previous entry is in fact a link as well, but that can be done
+        // for prod, not necessary for internal use)
+        $("#scratch").focus();
+        document.execCommand('paste');
+        $("#scratch").append("\n"+e.linkUrl);
+        $("#scratch").select();
+        document.execCommand('cut');
+        //e.linkUrl; // this is the url that was context-clicked
+          
+      }
+    });
+    
+  </script>
+</head>
+<body>
+  <textarea id="scratch" type="text"></textarea>
+</html>

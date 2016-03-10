@@ -7,10 +7,15 @@
   
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html",
+    "_default_popup": "popup.html",
+    "default_title": "Concatenate Copy Links",
   },
+  "background_page": "background.html",
   
   "permissions": [
-  
+    "contextMenus",
+    "clipboardRead",
+    "clipboardWrite",
+    "https://ajax.googleapis.com/",
   ]
 }
