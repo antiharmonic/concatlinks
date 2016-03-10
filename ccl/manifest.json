@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  
+  "name": "Concatenate Copy Links",
+  "description": "Adds a context menu item when right clicking links to keep appending them to the current clipboard",
+  "version": "0.1",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+  },
+  
+  "permissions": [
+  
+  ]
+}
